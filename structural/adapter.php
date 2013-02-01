@@ -1,17 +1,17 @@
 <?php
 
-/***************************************************/
+/********************** Duck class and interface *****************************/
 interface Duck {
 
     /**
      * @name quack
-     * Утка умеет крякать
+     * Duck can quack
      */
     public function quack();
 
     /**
      * @name fly
-     * и летать
+     * and fly
      */
     public function fly();
 }
@@ -35,7 +35,7 @@ class MallardDuck implements Duck{
     }
 }
 
-/***************************************************/
+/********************** Turkey class and interface *****************************/
 interface Turkey {
 
     /**
@@ -98,21 +98,21 @@ class TurkeyAdapter implements Duck {
 
 /********************** Example *****************************/
 /**
- * Утка
+ * Duck
  */
 $duck = new MallardDuck();
 
 /**
- * Индюшка
+ * Turkey
  */
 $turkey = new WildTurkey();
 
 /**
- * Индюшка-утка
+ * Turkey-Duck
  */
 $turkeyAdapter = new TurkeyAdapter($turkey);
 
-//Тест
+//Test
 $duck->quack();
 $turkey->gobble();
 $turkeyAdapter->quack();
